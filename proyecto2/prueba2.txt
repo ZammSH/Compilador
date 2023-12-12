@@ -1,0 +1,48 @@
+type_specifier : INT
+declaration_specifiers : type_specifier
+direct_declarator : IDENTIFIER
+direct_declarator : direct_declarator '(' ')'
+declarator : direct_declarator
+type_specifier : CHAR
+declaration_specifiers : type_specifier
+direct_declarator : IDENTIFIER
+primary_expression : CONSTANT
+postfix_expression : primary_expression 
+unary_expression : postfix_expression 
+cast_expression : unary_expression 
+multiplicative_expression : cast_expression 
+additive_expression : multiplicative_expression 
+shift_expression : additive_expression 
+relational_expression : shift_expression 
+equality_expression : relational_expression 
+and_expression : equality_expression
+exclusive_or_expression : and_expression
+inclusive_or_expression : exclusive_or_expression
+logical_and_expression : inclusive_or_expression
+logical_or_expression : logical_and_expression
+conditional_expression : logical_or_expression
+constant_expression : conditional_expression
+direct_declarator : direct_declarator '[' constant_expression ']'
+declarator : direct_declarator
+init_declarator : init_declarator
+init_declarator_list : init_declarator
+declaration : declaration_specifiers init_declarator_list ';'
+declaration_list : declaration
+type_specifier : CHAR
+declaration_specifiers : type_specifier
+direct_declarator : IDENTIFIER
+declarator : direct_declarator
+init_declarator : init_declarator
+init_declarator_list : init_declarator
+declaration : declaration_specifiers init_declarator_list ';'
+declaration_list : declaration_list declaration
+type_specifier : INT
+declaration_specifiers : type_specifier
+direct_declarator : IDENTIFIER
+declarator : direct_declarator
+init_declarator : init_declarator
+init_declarator_list : init_declarator
+declaration : declaration_specifiers init_declarator_list ';'
+declaration_list : declaration_list declaration
+
+Error: syntax error en línea 7 columna 4
