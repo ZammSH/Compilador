@@ -1,0 +1,159 @@
+<INT>
+<IDENTIFIER, "r">
+<,>
+<IDENTIFIER, "k">
+<;>
+<INT>
+<IDENTIFIER, "h">
+<[>
+<CONSTANT, 2>
+<]>
+<;>
+<INT>
+<IDENTIFIER, "printf">
+<(>
+<)>
+<;>
+<INT>
+<IDENTIFIER, "myfunc">
+<(>
+<INT>
+<IDENTIFIER, "a">
+<,>
+<INT>
+<IDENTIFIER, "b">
+<)>
+<;>
+<{>
+<INT>
+<IDENTIFIER, "z">
+<;>
+<RETURN>
+<IDENTIFIER, "a">
+<*>
+<IDENTIFIER, "b">
+<;>
+<}>
+<INT>
+<IDENTIFIER, "main">
+<(>
+<INT>
+<IDENTIFIER, "argc">
+<,>
+<CHAR>
+<*>
+<IDENTIFIER, "argv">
+<[>
+<]>
+<)>
+<{>
+<DOUBLE>
+<IDENTIFIER, "x">
+<=>
+<CONSTANT, 0.1>
+<;>
+<FLOAT>
+<IDENTIFIER, "y">
+<=>
+<CONSTANT, 1.5>
+</>
+<CONSTANT, 3>
+<;>
+<INT>
+<IDENTIFIER, "z">
+<=>
+<CONSTANT, 3>
+<+>
+<CONSTANT, 2>
+<;>
+<CHAR>
+<IDENTIFIER, "c">
+<=>
+<CONSTANT, '\xd2'>
+<,>
+<IDENTIFIER, "cc">
+<=>
+<CONSTANT, '\xe2'>
+<;>
+<INT>
+<IDENTIFIER, "i">
+<;>
+<IDENTIFIER, "z">
+<=>
+<SIZEOF>
+<(>
+<INT>
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "r">
+<>>
+<CONSTANT, 3>
+<)>
+<IDENTIFIER, "pritnf">
+<(>
+<STRING_LITERAL, "C Programmig // %d
+">
+<,>
+<CONSTANT, 5>
+<)>
+<;>
+<ELSE>
+<IDENTIFIER, "r">
+<=>
+<IDENTIFIER, "z">
+<;>
+<IDENTIFIER, "z">
+<=>
+<CONSTANT, 5>
+<->
+<(>
+<INT>
+<)>
+<CONSTANT, 3.1>
+<;>
+<FOR>
+<(>
+<IDENTIFIER, "i">
+<=>
+<CONSTANT, 0>
+<;>
+<IDENTIFIER, "i">
+<<>
+<CONSTANT, 5>
+<;>
+<IDENTIFIER, "i">
+<INC_OP>
+<)>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "%d
+">
+<)>
+<;>
+<}>
+<IDENTIFIER, "z">
+<=>
+<IDENTIFIER, "myfunc">
+<(>
+<IDENTIFIER, "h">
+<[>
+<CONSTANT, 1>
+<]>
+<,>
+<CONSTANT, 5>
+<)>
+<;>
+<IDENTIFIER, "z">
+<=>
+<IDENTIFIER, "myfunc">
+<(>
+<)>
+<;>
+<RETURN>
+<IDENTIFIER, "z">
+<;>
+<}>
+

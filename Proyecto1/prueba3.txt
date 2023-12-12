@@ -1,0 +1,1761 @@
+<TYPEDEF>
+<STRUCT>
+<IDENTIFIER, "PERSONA">
+<{>
+<INT>
+<IDENTIFIER, "id">
+<;>
+<CHAR>
+<IDENTIFIER, "nombre">
+<[>
+<CONSTANT, 30>
+<]>
+<;>
+<CHAR>
+<IDENTIFIER, "apaterno">
+<[>
+<CONSTANT, 30>
+<]>
+<;>
+<CHAR>
+<IDENTIFIER, "amaterno">
+<[>
+<CONSTANT, 30>
+<]>
+<;>
+<INT>
+<IDENTIFIER, "telefono">
+<[>
+<CONSTANT, 30>
+<]>
+<;>
+<INT>
+<IDENTIFIER, "correo">
+<[>
+<CONSTANT, 30>
+<]>
+<;>
+<}>
+<IDENTIFIER, "PERSONA">
+<;>
+<TYPEDEF>
+<STRUCT>
+<IDENTIFIER, "NODO">
+<{>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<;>
+<STRUCT>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "sig">
+<;>
+<STRUCT>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "ant">
+<;>
+<}>
+<IDENTIFIER, "NODO">
+<;>
+<TYPEDEF>
+<STRUCT>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "ini">
+<;>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "fin">
+<;>
+<}>
+<IDENTIFIER, "Lista">
+<;>
+</>
+</>
+<IDENTIFIER, "funciones">
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "CrearNodo">
+<(>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "persona">
+<)>
+<;>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "Inicializar">
+<(>
+<)>
+<;>
+<IDENTIFIER, "Lista">
+<IDENTIFIER, "InicializarLista">
+<(>
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "InsertarInicio">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "InsertarFinal">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<)>
+<;>
+</>
+</>
+<VOID>
+<IDENTIFIER, "InsertarPosicion">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<UNSIGNED>
+<IDENTIFIER, "p">
+<,>
+<UNSIGNED>
+<IDENTIFIER, "x">
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "EliminarNodoInicio">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "EliminarNodoFinal">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "EliminarNodoPosicion">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<UNSIGNED>
+<IDENTIFIER, "p">
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "ImprimirListaInicio">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "ImprimirListaFin">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "GuardarLista">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<)>
+<;>
+<VOID>
+<IDENTIFIER, "LeerLista">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<)>
+<;>
+<INT>
+<IDENTIFIER, "main">
+<(>
+<)>
+<{>
+<UNSIGNED>
+<INT>
+<IDENTIFIER, "opc">
+<,>
+<IDENTIFIER, "p">
+<;>
+<IDENTIFIER, "Lista">
+<IDENTIFIER, "lis">
+<;>
+<IDENTIFIER, "lis">
+<=>
+<IDENTIFIER, "InicializarLista">
+<(>
+<)>
+<;>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<;>
+<DO>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Menu
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "1-Insertar un registro al inicio.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "2-Insertar un registro al final.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "3-Insertar un registro en x posicion.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "4-Eliminar un registro al inicio.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "5-Eliminar un registro al final.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "6-Eliminar un registro en x posicion.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "7-Imprimir agenda de inicio a fin.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "8-Imprimir agenda de fin a inicio.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "9-Guardar agenda.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "10-Leer agenda.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "11-Salir.
+">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+Ingrese una opcion: ">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%i">
+<,>
+<&>
+<IDENTIFIER, "opc">
+<)>
+<;>
+<SWITCH>
+<(>
+<IDENTIFIER, "opc">
+<)>
+<{>
+<CASE>
+<CONSTANT, 1>
+<:>
+<{>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Insertar un registro al inicio
+">
+<)>
+<;>
+<IDENTIFIER, "person">
+<=>
+<IDENTIFIER, "Inicializar">
+<(>
+<)>
+<;>
+<IDENTIFIER, "InsertarInicio">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "person">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 2>
+<:>
+<{>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "">
+<)>
+<;>
+<IDENTIFIER, "person">
+<=>
+<IDENTIFIER, "Inicializar">
+<(>
+<)>
+<;>
+<IDENTIFIER, "InsertarFinal">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "person">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 3>
+<:>
+<{>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 4>
+<:>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Eliminar un registro al inicio.">
+<)>
+<;>
+<IDENTIFIER, "EliminarNodoInicio">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 5>
+<:>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Eliminar un registro del final.">
+<)>
+<;>
+<IDENTIFIER, "EliminarNodoFinal">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 6>
+<:>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Ingresa el valor que deseas eliminar">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%i">
+<,>
+<&>
+<IDENTIFIER, "p">
+<)>
+<;>
+<IDENTIFIER, "EliminarNodoPosicion">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "p">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 7>
+<:>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Imprimir agenda de inicio a fin.">
+<)>
+<;>
+<IDENTIFIER, "ImprimirListaInicio">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "person">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 8>
+<:>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Imprimir agenda de fin a inicio.">
+<)>
+<;>
+<IDENTIFIER, "ImprimirListaFin">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "person">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 9>
+<:>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Guardar Lista">
+<)>
+<;>
+<IDENTIFIER, "GuardarLista">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "person">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<CASE>
+<CONSTANT, 10>
+<:>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Leer agenda">
+<)>
+<;>
+<IDENTIFIER, "LeerLista">
+<(>
+<&>
+<IDENTIFIER, "lis">
+<)>
+<;>
+<BREAK>
+<;>
+<}>
+<DEFAULT>
+<:>
+<{>
+<BREAK>
+<;>
+<}>
+<}>
+<}>
+<WHILE>
+<(>
+<IDENTIFIER, "opc">
+<<>
+<CONSTANT, 11>
+<)>
+<;>
+<RETURN>
+<CONSTANT, 0>
+<;>
+<}>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "CrearNodo">
+<(>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "persona">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "ptr">
+<;>
+<IDENTIFIER, "ptr">
+<=>
+<(>
+<IDENTIFIER, "NODO">
+<*>
+<)>
+<IDENTIFIER, "malloc">
+<(>
+<SIZEOF>
+<(>
+<IDENTIFIER, "NODO">
+<)>
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "ptr">
+<EQ_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Error al reservar memoria.">
+<)>
+<;>
+<RETURN>
+<CONSTANT, 0>
+<;>
+<}>
+<IDENTIFIER, "ptr">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<=>
+<IDENTIFIER, "NULL">
+<;>
+<IDENTIFIER, "ptr">
+<PTR_OP>
+<IDENTIFIER, "ant">
+<=>
+<IDENTIFIER, "NULL">
+<;>
+<IDENTIFIER, "ptr">
+<PTR_OP>
+<IDENTIFIER, "person">
+<=>
+<IDENTIFIER, "persona">
+<;>
+<RETURN>
+<IDENTIFIER, "ptr">
+<;>
+<}>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "Inicializar">
+<(>
+<)>
+<{>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<;>
+<IDENTIFIER, "person">
+<=>
+<(>
+<IDENTIFIER, "PERSONA">
+<*>
+<)>
+<IDENTIFIER, "malloc">
+<(>
+<SIZEOF>
+<(>
+<IDENTIFIER, "PERSONA">
+<)>
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "person">
+<EQ_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Error al asignar memoria para el registroŒ">
+<)>
+<;>
+<RETURN>
+<CONSTANT, 0>
+<;>
+<}>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Nombre: 
+">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%s">
+<,>
+<&>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "nombre">
+<)>
+<;>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Apellido Paterno: 
+">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%s">
+<,>
+<&>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "apaterno">
+<)>
+<;>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Apellido Materno: 
+">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%s">
+<,>
+<&>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "amaterno">
+<)>
+<;>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Correo: 
+">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%s">
+<,>
+<&>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "correo">
+<)>
+<;>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Telefono: 
+">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%s">
+<,>
+<&>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "telefono">
+<)>
+<;>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<RETURN>
+<IDENTIFIER, "person">
+<;>
+<}>
+<IDENTIFIER, "Lista">
+<IDENTIFIER, "InicializarLista">
+<(>
+<)>
+<{>
+<IDENTIFIER, "Lista">
+<IDENTIFIER, "lis">
+<;>
+<IDENTIFIER, "lis">
+<.>
+<IDENTIFIER, "ini">
+<=>
+<IDENTIFIER, "NULL">
+<;>
+<IDENTIFIER, "lis">
+<.>
+<IDENTIFIER, "fin">
+<=>
+<IDENTIFIER, "NULL">
+<;>
+<RETURN>
+<IDENTIFIER, "lis">
+<;>
+<}>
+<VOID>
+<IDENTIFIER, "InsertarInicio">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "persona">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "ptr">
+<=>
+<IDENTIFIER, "CrearNodo">
+<(>
+<IDENTIFIER, "persona">
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "ptr">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<;>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<)>
+<PTR_OP>
+<IDENTIFIER, "ant">
+<=>
+<IDENTIFIER, "ptr">
+<;>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<=>
+<IDENTIFIER, "ptr">
+<;>
+<}>
+<ELSE>
+<{>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<=>
+<IDENTIFIER, "ptr">
+<;>
+<}>
+<}>
+<VOID>
+<IDENTIFIER, "InsertarFinal">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "persona">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "ptr">
+<=>
+<IDENTIFIER, "CrearNodo">
+<(>
+<IDENTIFIER, "persona">
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "ptr">
+<PTR_OP>
+<IDENTIFIER, "ant">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<;>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<)>
+<PTR_OP>
+<IDENTIFIER, "sig">
+<=>
+<IDENTIFIER, "ptr">
+<;>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<=>
+<IDENTIFIER, "ptr">
+<;>
+<}>
+<ELSE>
+<{>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<=>
+<IDENTIFIER, "ptr">
+<;>
+<}>
+<}>
+<VOID>
+<IDENTIFIER, "EliminarNodoInicio">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "ptr">
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "ptr">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<;>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<=>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<)>
+<PTR_OP>
+<IDENTIFIER, "sig">
+<;>
+<IDENTIFIER, "free">
+<(>
+<IDENTIFIER, "ptr">
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<EQ_OP>
+<IDENTIFIER, "NULL">
+<)>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<=>
+<IDENTIFIER, "NULL">
+<;>
+<}>
+<ELSE>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Error al eliminar. Lista vacia
+">
+<)>
+<;>
+<}>
+<VOID>
+<IDENTIFIER, "EliminarNodoFinal">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "ptr">
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "ptr">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<;>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<=>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<)>
+<PTR_OP>
+<IDENTIFIER, "ant">
+<;>
+<IDENTIFIER, "free">
+<(>
+<IDENTIFIER, "ptr">
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<EQ_OP>
+<IDENTIFIER, "NULL">
+<)>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<=>
+<IDENTIFIER, "NULL">
+<;>
+<}>
+<ELSE>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Error al eliminar. Lista vacia
+">
+<)>
+<;>
+<}>
+<VOID>
+<IDENTIFIER, "EliminarNodoPosicion">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<UNSIGNED>
+<IDENTIFIER, "p">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "aux">
+<;>
+<INT>
+<IDENTIFIER, "i">
+<=>
+<CONSTANT, 0>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<;>
+<WHILE>
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<AND_OP>
+<IDENTIFIER, "i">
+<<>
+<IDENTIFIER, "p">
+<)>
+<{>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<;>
+<IDENTIFIER, "i">
+<INC_OP>
+<;>
+<}>
+<IF>
+<(>
+<IDENTIFIER, "p">
+<EQ_OP>
+<CONSTANT, 0>
+<)>
+<IDENTIFIER, "EliminarNodoInicio">
+<(>
+<IDENTIFIER, "lis">
+<)>
+<;>
+<ELSE>
+<{>
+<IF>
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<EQ_OP>
+<IDENTIFIER, "NULL">
+<)>
+<IDENTIFIER, "EliminarNodoFinal">
+<(>
+<IDENTIFIER, "lis">
+<)>
+<;>
+<ELSE>
+<{>
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "ant">
+<)>
+<PTR_OP>
+<IDENTIFIER, "sig">
+<=>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<;>
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<)>
+<PTR_OP>
+<IDENTIFIER, "ant">
+<=>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "ant">
+<;>
+<IDENTIFIER, "free">
+<(>
+<IDENTIFIER, "aux">
+<)>
+<;>
+<}>
+<}>
+<}>
+<ELSE>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Error al eliminar. Lista vacia
+">
+<)>
+<;>
+<}>
+<VOID>
+<IDENTIFIER, "ImprimirListaInicio">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "ini">
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<EQ_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "La lista se encuentra vacia. 
+">
+<)>
+<;>
+<}>
+<ELSE>
+<{>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "lis">
+<;>
+<DO>
+<{>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "person">
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Nombre: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "nombre">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Apellido Paterno: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "apaterno">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Apellido Materno: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "amaterno">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Correo: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "correo">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Telefono: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "telefono">
+<)>
+<;>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<;>
+<}>
+<WHILE>
+<(>
+<IDENTIFIER, "aux">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<;>
+<}>
+<}>
+<VOID>
+<IDENTIFIER, "ImprimirListaFin">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "lis">
+<PTR_OP>
+<IDENTIFIER, "fin">
+<;>
+<IF>
+<(>
+<IDENTIFIER, "lis">
+<EQ_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "La lista se encuentra vacia. 
+">
+<)>
+<;>
+<}>
+<ELSE>
+<{>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "lis">
+<;>
+<DO>
+<{>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "person">
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Nombre: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "nombre">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Apellido Paterno: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "apaterno">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Apellido Materno: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "amaterno">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Correo: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "correo">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Telefono: %s
+">
+<,>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "telefono">
+<)>
+<;>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "ant">
+<;>
+<}>
+<WHILE>
+<(>
+<IDENTIFIER, "aux">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<;>
+<}>
+<}>
+<VOID>
+<IDENTIFIER, "GuardarLista">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<,>
+<IDENTIFIER, "PERSONA">
+<*>
+<IDENTIFIER, "person">
+<)>
+<{>
+<IDENTIFIER, "NODO">
+<*>
+<IDENTIFIER, "aux">
+<;>
+<IDENTIFIER, "FILE">
+<*>
+<IDENTIFIER, "Archivo">
+<;>
+<IDENTIFIER, "Archivo">
+<=>
+<IDENTIFIER, "fopen">
+<(>
+<STRING_LITERAL, "Registros.txt">
+<,>
+<STRING_LITERAL, "w">
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "Archivo">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "lis">
+<;>
+<DO>
+<{>
+<IDENTIFIER, "fprintf">
+<(>
+<IDENTIFIER, "Archivo">
+<,>
+<STRING_LITERAL, "
+Nombre: ">
+<)>
+<;>
+<IDENTIFIER, "fputs">
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "nombre">
+<,>
+<IDENTIFIER, "Archivo">
+<)>
+<;>
+<IDENTIFIER, "fprintf">
+<(>
+<IDENTIFIER, "Archivo">
+<,>
+<STRING_LITERAL, "
+Apellido Paterno: ">
+<)>
+<;>
+<IDENTIFIER, "fputs">
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "apaterno">
+<,>
+<IDENTIFIER, "Archivo">
+<)>
+<;>
+<IDENTIFIER, "fprintf">
+<(>
+<IDENTIFIER, "Archivo">
+<,>
+<STRING_LITERAL, "
+Apellido Materno: ">
+<)>
+<;>
+<IDENTIFIER, "fputs">
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "amaterno">
+<,>
+<IDENTIFIER, "Archivo">
+<)>
+<;>
+<IDENTIFIER, "fprintf">
+<(>
+<IDENTIFIER, "Archivo">
+<,>
+<STRING_LITERAL, "
+Numero: %.0f">
+<)>
+<;>
+<IDENTIFIER, "fputs">
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "telefono">
+<,>
+<IDENTIFIER, "Archivo">
+<)>
+<;>
+<IDENTIFIER, "fprintf">
+<(>
+<IDENTIFIER, "Archivo">
+<,>
+<STRING_LITERAL, "
+Correo: ">
+<)>
+<;>
+<IDENTIFIER, "fputs">
+<(>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "person">
+<PTR_OP>
+<IDENTIFIER, "correo">
+<,>
+<IDENTIFIER, "Archivo">
+<)>
+<;>
+<IDENTIFIER, "aux">
+<=>
+<IDENTIFIER, "aux">
+<PTR_OP>
+<IDENTIFIER, "sig">
+<;>
+<}>
+<WHILE>
+<(>
+<IDENTIFIER, "aux">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<;>
+<IDENTIFIER, "fclose">
+<(>
+<IDENTIFIER, "Archivo">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+Archivo Guardado">
+<)>
+<;>
+<}>
+<ELSE>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "Error: no se pudo crear el archivo. 
+">
+<)>
+<;>
+<}>
+<VOID>
+<IDENTIFIER, "LeerLista">
+<(>
+<IDENTIFIER, "Lista">
+<*>
+<IDENTIFIER, "lis">
+<)>
+<{>
+<INT>
+<IDENTIFIER, "total">
+<;>
+<CHAR>
+<IDENTIFIER, "lista">
+<[>
+<CONSTANT, 100>
+<]>
+<[>
+<CONSTANT, 100>
+<]>
+<;>
+<IDENTIFIER, "FILE">
+<*>
+<IDENTIFIER, "Archivo">
+<;>
+<IDENTIFIER, "Archivo">
+<=>
+<IDENTIFIER, "fopen">
+<(>
+<STRING_LITERAL, "Registros.txt">
+<,>
+<STRING_LITERAL, "r">
+<)>
+<;>
+<IF>
+<(>
+<IDENTIFIER, "Archivo">
+<NE_OP>
+<IDENTIFIER, "NULL">
+<)>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+Se abrio el archivo">
+<)>
+<;>
+</>
+</>
+<IDENTIFIER, "Lectura">
+<IDENTIFIER, "del">
+<IDENTIFIER, "archivo">
+<.>
+<INT>
+<IDENTIFIER, "k">
+<=>
+<CONSTANT, 0>
+<;>
+<WHILE>
+<(>
+<!>
+<IDENTIFIER, "feof">
+<(>
+<IDENTIFIER, "Archivo">
+<)>
+<)>
+<{>
+<IDENTIFIER, "fgets">
+<(>
+<&>
+<IDENTIFIER, "lista">
+<[>
+<IDENTIFIER, "k">
+<]>
+<[>
+<CONSTANT, 0>
+<]>
+<,>
+<CONSTANT, 100>
+<,>
+<IDENTIFIER, "Archivo">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+%s">
+<,>
+<&>
+<IDENTIFIER, "lista">
+<[>
+<IDENTIFIER, "k">
+<]>
+<[>
+<CONSTANT, 0>
+<]>
+<)>
+<;>
+<}>
+<IDENTIFIER, "total">
+<=>
+<IDENTIFIER, "k">
+<;>
+<IDENTIFIER, "fclose">
+<(>
+<IDENTIFIER, "Archivo">
+<)>
+<;>
+<}>
+<ELSE>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+No se abrio el archivo">
+<)>
+<;>
+<}>
+</>
+</>
+<IDENTIFIER, "Mostrar">
+<IDENTIFIER, "el">
+<IDENTIFIER, "contenido">
+<IDENTIFIER, "del">
+<IDENTIFIER, "archivo">
+<IDENTIFIER, "en">
+<IDENTIFIER, "pantalla">
+<FOR>
+<(>
+<INT>
+<IDENTIFIER, "k">
+<=>
+<CONSTANT, 0>
+<;>
+<IDENTIFIER, "k">
+<<>
+<IDENTIFIER, "total">
+<;>
+<IDENTIFIER, "k">
+<INC_OP>
+<)>
+<{>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+1. %s">
+<,>
+<&>
+<IDENTIFIER, "lista">
+<[>
+<IDENTIFIER, "k">
+<]>
+<[>
+<CONSTANT, 0>
+<]>
+<)>
+<;>
+<}>
+<}>
+

@@ -1,0 +1,166 @@
+<INT>
+<IDENTIFIER, "main">
+<(>
+<)>
+<{>
+<CHAR>
+<IDENTIFIER, "Linea">
+<[>
+<CONSTANT, 100>
+<]>
+<;>
+<CHAR>
+<IDENTIFIER, "letra1">
+<;>
+<INT>
+<IDENTIFIER, "i">
+<;>
+</>
+</>
+<IDENTIFIER, "Para">
+<IDENTIFIER, "capturar">
+<IDENTIFIER, "un">
+<IDENTIFIER, "caracter">
+<IDENTIFIER, "o">
+<IDENTIFIER, "una">
+<IDENTIFIER, "linea">
+<IDENTIFIER, "de">
+<IDENTIFIER, "texto">
+<IDENTIFIER, "podemos">
+<IDENTIFIER, "usar">
+</>
+</>
+<IDENTIFIER, "las">
+<IDENTIFIER, "siguientes">
+<IDENTIFIER, "funciones">
+<:>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+Escriba una letra: ">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%c">
+<,>
+<&>
+<IDENTIFIER, "letra1">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "El caracter capturado es: %c">
+<,>
+<IDENTIFIER, "letra1">
+<)>
+<;>
+</>
+</>
+<IDENTIFIER, "getchar">
+<(>
+<)>
+<;>
+<IDENTIFIER, "fflush">
+<(>
+<IDENTIFIER, "stdin">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+Escriba otra letra: ">
+<)>
+<;>
+<IDENTIFIER, "letra1">
+<=>
+<IDENTIFIER, "getchar">
+<(>
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "El caracter capturado es: %c">
+<,>
+<IDENTIFIER, "letra1">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+Escriba una linea de texto: ">
+<)>
+<;>
+<IDENTIFIER, "gets">
+<(>
+<IDENTIFIER, "Linea">
+<)>
+<;>
+</>
+</>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+El texto es:
+%s">
+<,>
+<IDENTIFIER, "Linea">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+El texto es:
+">
+<)>
+<;>
+<IDENTIFIER, "i">
+<=>
+<CONSTANT, 0>
+<;>
+<WHILE>
+<(>
+<IDENTIFIER, "Linea">
+<[>
+<IDENTIFIER, "i">
+<]>
+<NE_OP>
+<CONSTANT, '\x00'>
+<)>
+<{>
+<IDENTIFIER, "putchar">
+<(>
+<IDENTIFIER, "Linea">
+<[>
+<IDENTIFIER, "i">
+<]>
+<)>
+<;>
+<IDENTIFIER, "i">
+<INC_OP>
+<;>
+<}>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+Escriba una linea de texto: ">
+<)>
+<;>
+<IDENTIFIER, "scanf">
+<(>
+<STRING_LITERAL, "%s">
+<,>
+<IDENTIFIER, "Linea">
+<)>
+<;>
+<IDENTIFIER, "printf">
+<(>
+<STRING_LITERAL, "
+El texto es:
+%s">
+<,>
+<IDENTIFIER, "Linea">
+<)>
+<;>
+<}>
+
