@@ -449,6 +449,7 @@ int main(int argc, char*argv[])
 	if (argc < 2)
     {
         printf("Analizador Sintáctico version 0.8\n\n");
+	printf("EQUIPO:5\nHinojosa Ruiz Zianya Samanta\nCoronilla Hernandez Emmanuel\nArriaga Saldaña Jonathan Esau\n\n");
         printf("Uso: %s archivo\n", argv[0]);
         exit(1);
 		
