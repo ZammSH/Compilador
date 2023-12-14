@@ -394,7 +394,7 @@ int main(int argc, char *argv[])
     if (argc<2)
     {
         printf("Analizador léxico versión 0.1\n\n");
-		printf("EQUIPO:5\nHinojosa Ruiz Zianya Samanta\nCoronilla Hernandez Emmanuel\nArriaga Saldaña Jonathan Esau\n\n");
+	printf("EQUIPO:5\nHinojosa Ruiz Zianya Samanta\nCoronilla Hernandez Emmanuel\nArriaga Saldaña Jonathan Esau\n\n");
         printf("Uso: %s <archivo>\n\n", argv[0]);
 		exit(1);
 		
